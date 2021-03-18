@@ -33,9 +33,9 @@
 				<?php echo form_open('main/edit');?>
 				<?php echo form_hidden('nim',$mahasiswa[0]->nim);?>
 				<table class="table">
-				    <tr><td>NIM</td><td><?php echo form_input('',$mahasiswa[0]->nim,"disabled class='form-control'");?></td></tr>		    
-				    <tr><td>NAMA</td><td><?php echo form_input('nama',$mahasiswa[0]->nama,"class='form-control'");?></td></tr>
-				    <tr><td>EMAIL</td><td><?php echo form_input('email',$mahasiswa[0]->email,"class='form-control'");?></td></tr>
+				    <tr><td>NIM</td><td><?php echo form_input('',$mahasiswa[0]->nim,"disabled class='form-control' required");?></td></tr>		    
+				    <tr><td>NAMA</td><td><?php echo form_input('nama',$mahasiswa[0]->nama,"class='form-control' required");?></td></tr>
+				    <tr><td>EMAIL</td><td><?php echo form_input('email',$mahasiswa[0]->email,"class='form-control' required");?></td></tr>
 				    <tr><td>JURUSAN</td><td>
 				            <select name="jurusan" class="form-control">
 				            <?php
@@ -47,7 +47,7 @@
 				            ?>
 				            </select>
 				        </td></tr>
-				    <tr><td>ALAMAT</td><td><?php echo form_input('alamat',$mahasiswa[0]->alamat,"class='form-control'");?></td></tr>
+				    <tr><td>ALAMAT</td><td><?php echo form_input('alamat',$mahasiswa[0]->alamat,"class='form-control' required");?></td></tr>
 				    <tr><td colspan="2">
 				        <?php echo form_submit('submit','Simpan','class="btn btn-simpan"');?>
 				        <?php echo anchor('main','Kembali','class="btn btn-warning"');?></td></tr>

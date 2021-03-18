@@ -32,9 +32,9 @@
 			<div class="col-12">
 				<?php echo form_open('main/create');?>
 				<table class="table">
-				    <tr><td>NIM</td><td><?php echo form_input('nim','','class="form-control"');?></td></tr>
-				    <tr><td>NAMA</td><td><?php echo form_input('nama','','class="form-control"');?></td></tr>
-				    <tr><td>EMAIL</td><td><?php echo form_input('email','','class="form-control"');?></td></tr>
+				    <tr><td>NIM</td><td><?php echo form_input('nim','','class="form-control" required');?></td></tr>
+				    <tr><td>NAMA</td><td><?php echo form_input('nama','','class="form-control" required');?></td></tr>
+				    <tr><td>EMAIL</td><td><?php echo form_input('email','','class="form-control" required');?></td></tr>
 				    <tr><td>JURUSAN</td><td>
 				            <select name="jurusan" class="form-control">
 				            <?php
@@ -44,7 +44,7 @@
 				            ?>
 				            </select>
 				        </td></tr>
-				    <tr><td>ALAMAT</td><td><?php echo form_input('alamat','','class="form-control"');?></td></tr>
+				    <tr><td>ALAMAT</td><td><?php echo form_input('alamat','','class="form-control" required');?></td></tr>
 				    <tr><td colspan="2">
 				        <?php echo form_submit('submit','Simpan','class="btn btn-simpan"');?>
 				        <?php echo anchor('main','Kembali','class="btn btn-warning"');?></td></tr>
