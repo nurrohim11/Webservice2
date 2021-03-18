@@ -34,6 +34,7 @@
 				<table class="table">
 				    <tr><td>NIM</td><td><?php echo form_input('nim','','class="form-control"');?></td></tr>
 				    <tr><td>NAMA</td><td><?php echo form_input('nama','','class="form-control"');?></td></tr>
+				    <tr><td>EMAIL</td><td><?php echo form_input('email','','class="form-control"');?></td></tr>
 				    <tr><td>JURUSAN</td><td>
 				            <select name="jurusan" class="form-control">
 				            <?php

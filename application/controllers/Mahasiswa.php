@@ -12,10 +12,18 @@ class Mahasiswa extends REST_Controller {
     function index_get() {
         $nim = $this->get('nim');
         if ($nim == '') {
-            $mahasiswa = $this->db->get('mahasiswa')->result();
+            $mahasiswa = $this->db->query("
+                    SELECT a.*,b.nama_jurusan FROM mahasiswa a
+                    join jurusan b
+                        on a.id_jurusan = b.id_jurusan
+                ")->result();
         } else {
-            $this->db->where('nim', $nim);
-            $mahasiswa = $this->db->get('mahasiswa')->result();
+            $mahasiswa = $this->db->query("
+                    SELECT a.*,b.nama_jurusan FROM mahasiswa a
+                    join jurusan b
+                        on a.id_jurusan = b.id_jurusan
+                    where a.nim = '$nim'
+                ")->result();
         }
         $this->response($mahasiswa, 200);
     }
@@ -25,6 +33,7 @@ class Mahasiswa extends REST_Controller {
         $data = array(
             'nim'           => $this->post('nim'),
             'nama'          => $this->post('nama'),
+            'email'          => $this->post('email'),
             'id_jurusan'    => $this->post('id_jurusan'),
             'alamat'        => $this->post('alamat'));
         $insert = $this->db->insert('mahasiswa', $data);
@@ -41,6 +50,7 @@ class Mahasiswa extends REST_Controller {
         $data = array(
             'nim'       => $this->put('nim'),
             'nama'      => $this->put('nama'),
+            'email'      => $this->put('email'),
             'id_jurusan'=> $this->put('id_jurusan'),
             'alamat'    => $this->put('alamat'));
         $this->db->where('nim', $nim);

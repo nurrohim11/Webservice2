@@ -19,6 +19,7 @@ class Main extends CI_Controller {
             $data = array(
                 'nim'       =>  $this->input->post('nim'),
                 'nama'      =>  $this->input->post('nama'),
+                'email'      =>  $this->input->post('email'),
                 'id_jurusan'=>  $this->input->post('jurusan'),
                 'alamat'    =>  $this->input->post('alamat')
             );
@@ -42,6 +43,7 @@ class Main extends CI_Controller {
             $data = array(
                 'nim'       =>  $this->input->post('nim'),
                 'nama'      =>  $this->input->post('nama'),
+                'email'      =>  $this->input->post('email'),
                 'id_jurusan'=>  $this->input->post('jurusan'),
                 'alamat'    =>  $this->input->post('alamat')
             );

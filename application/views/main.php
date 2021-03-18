@@ -40,7 +40,8 @@
 						<tr>
 						<th scope="col">NIM</th>
 						<th scope="col">NAMA</th>
-						<th scope="col">ID JURUSAN</th>
+						<th scope="col">EMAIL</th>
+						<th scope="col">JURUSAN</th>
 						<th scope="col">ALAMAT</th>
 						<th scope="col">Actions</th>
 						</tr>
@@ -50,7 +51,8 @@
 					<tr>
 						<td scope="row"><?php echo $row->nim ?></td>
 						<td scope="row"><?php echo $row->nama ?></td>
-						<td scope="row"><?php echo $row->id_jurusan ?></td>
+						<td scope="row"><?php echo $row->email ?></td>
+						<td scope="row"><?php echo $row->nama_jurusan ?></td>
 						<td scope="row"><?php echo $row->alamat ?></td>
 						<td>
 							<a class="btn btn-success" href="<?php echo base_url() ?>main/edit/<?php echo $row->nim ?>"><i class="fas fa-edit"></i></a>

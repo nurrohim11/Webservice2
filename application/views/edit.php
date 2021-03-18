@@ -35,6 +35,7 @@
 				<table class="table">
 				    <tr><td>NIM</td><td><?php echo form_input('',$mahasiswa[0]->nim,"disabled class='form-control'");?></td></tr>		    
 				    <tr><td>NAMA</td><td><?php echo form_input('nama',$mahasiswa[0]->nama,"class='form-control'");?></td></tr>
+				    <tr><td>EMAIL</td><td><?php echo form_input('email',$mahasiswa[0]->email,"class='form-control'");?></td></tr>
 				    <tr><td>JURUSAN</td><td>
 				            <select name="jurusan" class="form-control">
 				            <?php
